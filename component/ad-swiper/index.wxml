@@ -1,0 +1,8 @@
+<!--component/adswiper/index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="#E85021">
+  <block wx:for="{{ad}}" wx:for-index="idx" wx:key="idx">
+    <swiper-item>
+      <image src="{{item.cover}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>

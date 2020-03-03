@@ -1,13 +1,17 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="page">
+  <!--页头-->
+  <view class="page__hd">
+    <ad-swiper indicatorDots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"></ad-swiper>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="page__bd">
+    <view class='weui-flex'>
+    <view><text>社区服务</text></view>
+      <block wx:for="{{communityservice}}" wx:for-index="idx" wx:key="idx">
+        <view class='search-group' bindtap='{{item.cb}}'>
+          <image src='{{item.img}}'></image>
+          <view class='text'>{{item.text}}</view>
+        </view>
+      </block>
+    </view>
   </view>
 </view>
