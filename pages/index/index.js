@@ -11,8 +11,7 @@ Page({
     autoplay: true,
     duration: 1000,
     interval: 5000,
-    communityservice: [
-      {
+    communityservice: [{
         name: 'issue',
         img: '/img/opendoor.svg',
         text: '远程开门',
@@ -31,20 +30,20 @@ Page({
         cb: 'trucks'
       },
       {
-        name: 'hotboom',
+        name: 'repair',
         img: '/img/repair.svg',
         text: '物业报修',
-        cb: 'hotboom'
+        cb: 'repair'
       }
     ],
     show: false,
     text: ''
   },
-  isLogin: function () {
+  isLogin: function() {
     return new Promise((resolve, reject) => {
       // 判断是否已经获取过用户信息
       wx.getSetting({
-        success: function (res) {
+        success: function(res) {
           if (res.authSetting['scope.userInfo']) {
             resolve(true)
           } else {
@@ -55,7 +54,7 @@ Page({
     })
   },
   getAd() {
-    util.req('adv/list', {}, function (res) {
+    util.req('adv/list', {}, function(res) {
       if (res.status === 1) {
         app.globalData.ad = res.list.map(item => {
           item.cover = app.globalData.URL + item.cover
@@ -64,8 +63,11 @@ Page({
       }
     })
   },
-  onShow: function () {
+  repair: function() {
+    wx.navigateTo({
+      url: '/pages/repair/index',
+    })
   },
-  onLoad: function () {
-  },
+  onShow: function() {},
+  onLoad: function() {},
 })
