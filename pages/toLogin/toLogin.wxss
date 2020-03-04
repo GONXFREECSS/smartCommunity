@@ -1,1 +1,194 @@
-/* pages/toLogin/toLogin.wxss */
+page{ 
+
+    height: 100%; 
+   
+   } 
+   
+     
+   
+   .container { 
+   
+    height: 100%; 
+   
+    display: flex; 
+   
+    flex-direction: column; 
+   
+    padding: 0; 
+   
+    box-sizing: border-box; 
+   
+    background-color: #F2F2F2
+   
+   } 
+   
+     
+   
+   /*登录图片*/
+   
+   .login-icon{ 
+   
+    flex: none; 
+   
+   } 
+   
+   .login-img{ 
+   
+    margin-top: 50px;
+   
+    width: 50px; 
+   
+    height: 50px
+   
+   } 
+   
+     
+   
+   /*表单内容*/
+   
+   .login-from { 
+   
+    margin-top: 20px; 
+   
+    flex: auto; 
+   
+    height:100%; 
+   
+   } 
+   
+     
+   
+   .inputView { 
+   
+    background-color: #fff; 
+   
+    line-height: 44px; 
+   
+   } 
+   
+   /*输入框*/
+   
+   .nameImage, .keyImage { 
+   
+    margin-left: 18px; 
+   
+    margin-top:10px;
+   
+    width: 20px; 
+   
+    height: 20px
+   
+   } 
+   
+     
+   
+   .loginLab { 
+   
+    margin: 15px 15px 15px 10px; 
+   
+    color: #545454; 
+   
+    font-size: 14px
+   
+   } 
+   
+   .inputText { 
+   
+    flex: block; 
+   
+    float: right; 
+   
+    text-align: right; 
+   
+    margin-right: 22px; 
+   
+    margin-top: 11px; 
+   
+    color: #cccccc; 
+   
+    font-size: 14px
+   
+   } 
+   
+     
+   
+   .line { 
+   
+    width: 100%; 
+   
+    height: 1px; 
+   
+    background-color: #cccccc; 
+   
+    margin-top: 1px; 
+   
+   } 
+   
+   /*按钮*/
+   
+   .loginBtnView { 
+   
+    width: 100%; 
+   
+    height: auto; 
+   
+    background-color: #f2f2f2; 
+   
+    margin-top: 0px; 
+   
+    margin-bottom: 0px; 
+   
+    padding-bottom: 0px; 
+   
+   } 
+   
+   .registerBtnView { 
+   
+    width: 100%; 
+   
+    height: auto; 
+   
+    background-color: #f2f2f2; 
+   
+    margin-top: 0px; 
+   
+    margin-bottom: 0px; 
+   
+    padding-bottom: 0px; 
+    
+    border:none;
+   
+   }
+   
+   .registerBtn::after{
+     border:none;
+   }
+   
+     
+   
+   .loginBtn { 
+   
+    width: 80%; 
+   
+    background-color:#1296db;
+   
+    margin-top: 35px; 
+   
+   }
+   
+   .registerBtn { 
+   
+    width: 50%; 
+   
+    height:40px;
+   
+    color:#ffcc33;
+   
+    background-color: #f2f2f2;
+   
+    margin-top: 35px; 
+   
+    border:none;
+   
+   }
+   

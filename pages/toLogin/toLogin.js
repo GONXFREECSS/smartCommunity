@@ -1,10 +1,50 @@
 // pages/toLogin/toLogin.js
+var util = require('../../utils/util.js');
+var app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    username: '',
+    password: ''
+  },
+  usernameInput: function (e) {
+    console.log(e.detail.value);
+    this.setData({
+      username: e.detail.value
+    })
+    console.log(e.detail.value);
+  },
+  passwordInput: function (e) {
+    this.setData({
+      password: e.detail.value
+    })
+    console.log(e.detail.value);
+  },
+  formSubmit: function (e) {
+    var data = e.detail.value;
+    var that = this;
+    console.log(data);
+
+    util.getReq('api/denglu/login', data, function (data) {
+      console.log(data.token)
+      if(data.code==0){
+        wx.setStorage({
+          key: "token",
+          data: data.token
+        })
+        app.setUserInfo({nickName:'admin'})
+        console.log(wx.getStorage('token'))
+        wx.switchTab({
+          url: '/pages/index/index'
+        })
+      }
+    })
+    util.clearError(that);
+
 
   },
 

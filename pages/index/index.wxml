@@ -5,7 +5,40 @@
   </view>
   <view class="page__bd">
     <view class='weui-flex'>
-    <view class="title"><text>社区服务</text></view>
+    <!-- <view class="title"><text>社区服务</text></view> -->
+      <block wx:for="{{communityservice}}" wx:for-index="idx" wx:key="idx">
+        <view class='search-group' bindtap='{{item.cb}}'>
+          <image src='{{item.img}}'></image>
+          <view class='text'>{{item.text}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class='weui-flex'>
+    <!-- <view class="title"><text>社区服务</text></view> -->
+      <block wx:for="{{communityservice}}" wx:for-index="idx" wx:key="idx">
+        <view class='search-group' bindtap='{{item.cb}}'>
+          <image src='{{item.img}}'></image>
+          <view class='text'>{{item.text}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class='weui-flex'>
+    <!-- <view class="title"><text>社区服务</text></view> -->
+      <block wx:for="{{communityservice}}" wx:for-index="idx" wx:key="idx">
+        <view class='search-group' bindtap='{{item.cb}}'>
+          <image src='{{item.img}}'></image>
+          <view class='text'>{{item.text}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class='weui-flex'>
+    <!-- <view class="title"><text>社区服务</text></view> -->
       <block wx:for="{{communityservice}}" wx:for-index="idx" wx:key="idx">
         <view class='search-group' bindtap='{{item.cb}}'>
           <image src='{{item.img}}'></image>

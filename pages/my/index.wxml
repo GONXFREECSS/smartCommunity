@@ -1,2 +1,67 @@
-<!--pages/my/index.wxml-->
-<text>pages/my/index.wxml</text>
+<view class="page">
+  <!--页头-->
+  <view class="page__hd">
+    <view class="head">
+      <view>
+        <navigator wx:if="{{userInfo}}" url="/pages/my/info">
+          <image src="{{userInfo.avatarUrl}}"></image>
+        </navigator>
+        <navigator class="no-login" wx:else url="/pages/toLogin/toLogin">
+          <image src=""></image>
+          <text>请先进行登录</text>
+        </navigator>
+      </view>
+      <view>
+        <text style="color: #fff;">{{userInfo.nickName}}</text>
+      </view>
+    </view>
+  </view>
+  <!--主体-->
+  <view class="page__bd">
+    <view class="list">
+
+      <view class="page__bd">
+        <view class="weui-cells weui-cells_after-title">
+          <navigator url="/pages/my/list" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="/img/edit.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+            </view>
+            <view class="weui-cell__bd">我的门卡</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">{{infoCount}}</view>
+          </navigator>
+          <navigator url="/pages/my/order" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="/img/order.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+            </view>
+            <view class="weui-cell__bd">我的订单</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+          <navigator url="/pages/my/info" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="/img/fangke.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+            </view>
+            <view class="weui-cell__bd">我的访客</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+          <navigator url="/pages/my/cars" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="/img/help.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+            </view>
+            <view class="weui-cell__bd">帮助中心</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+          <navigator url="/pages/my/driver" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <view class="weui-cell__hd">
+              <image src="/img/we.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+            </view>
+            <view class="weui-cell__bd">关于我们</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+        </view>
+      </view>
+
+
+    </view>
+  </view>
+  <!--没有页脚-->
+</view>

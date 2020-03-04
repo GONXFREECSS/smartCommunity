@@ -24,10 +24,10 @@ Page({
         cb: 'car'
       },
       {
-        name: 'trucks',
+        name: 'houseregistration',
         img: '/img/house.svg',
         text: '房屋登记',
-        cb: 'trucks'
+        cb: 'houseregistration'
       },
       {
         name: 'repair',
@@ -65,7 +65,12 @@ Page({
   },
   repair: function() {
     wx.navigateTo({
-      url: '/pages/repair/index',
+      url: '/pages/repair/add',
+    })
+  },
+  houseregistration: function(){
+    wx.navigateTo({
+      url: '/pages/houseregistration/add',
     })
   },
   onShow: function() {},

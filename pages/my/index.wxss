@@ -1,1 +1,41 @@
-/* pages/my/index.wxss */
+/**index.wxss**/
+
+.head {
+  display: flex;
+  flex-direction: column;
+  background: #efefef;
+  width: 100%;
+  padding: 100rpx 0rpx;
+  align-items: center;
+  justify-content: space-between;
+  background: #1296db;
+}
+
+.head image {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.list view {
+  font-size: 12pt;
+}
+
+.list .weui-cell {
+  padding: 15px !important;
+}
+
+.no-login {
+  display: flex;
+  color: #fff;
+}
+
+.no-login image {
+  background-color: #efefef;
+}
+
+.no-login text {
+  line-height: 64px;
+  margin-left: 10px;
+}

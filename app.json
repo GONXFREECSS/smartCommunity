@@ -1,7 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/repair/index"
+    "pages/repair/index",
+    "pages/repair/add",
+    "pages/my/index",
+    "pages/houseregistration/index",
+    "pages/houseregistration/add"
   ],
   "permission": {
     "scope.userLocation": {
@@ -10,7 +14,7 @@
   },
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarBackgroundColor": "#fffffe",
     "navigationBarTitleText": "智慧社区",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
@@ -40,7 +44,7 @@
         "selectedIconPath": "img/dynamic2.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/my/index",
         "text": "我的",
         "iconPath": "img/my.png",
         "selectedIconPath": "img/my2.png"
