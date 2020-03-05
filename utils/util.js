@@ -27,7 +27,7 @@ function req(url, data, cb) {
     method: 'post',
     header: {
       'Content-Type': 'application/x-www-form-urlencoded',
-      'token': token
+      'Authorization': token
     },
     success: function (res) {
       return typeof cb == "function" && cb(res.data)

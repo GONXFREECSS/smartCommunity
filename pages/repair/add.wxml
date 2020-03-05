@@ -1,7 +1,7 @@
 <view class="page">
   <view class="page__bd">
     <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>
-    <form bindsubmit="formSubmit">
+    <form bindsubmit="formSubmit" >
       <view class="weui-cells__title">确认报修人信息</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
@@ -62,8 +62,30 @@
           </view>
         </view>
       </view>
+      <view class='pic-title'>
+        <view class='pic-title-content'>
+          上传凭证
+          <span class='pic-title-content-right'>
+            (不超过
+            <span class='pic-title-content-right-count'>3</span>
+            张)
+          </span>
+        </view>
+      </view>
+      <view class="weui-cells weui-cells_after-title">
+      <view class='pic-content'>
+        <view class="camera" bindtap='uploadImg'>
+          <image src="/img/camera.png" class="img"></image>
+        </view>
+        <block wx:for="{{pics}}" wx:for-item="pic" wx:for-index='index'>
+          <image class="each-img" src='{{pic}}'>
+            <icon class='delete-icon' type="clear" size="40rpx" color="#999999" bindtap='delete_this' data-src="{{index}}" />
+          </image>
+        </block>
+      </view>
+      </view>
       <view class="weui-btn-area">
-        <button class="weui-btn" type="primary" formType="submit">确定</button>
+        <button class="weui-btn" type="primary" form-type="submit">确定</button>
       </view>
     </form>
   </view>

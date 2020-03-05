@@ -38,3 +38,63 @@
 .weui-input {
   overflow: hidden;
 }
+.pic-title {
+  margin: 20rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  color: rgba(34, 34, 34, 1);
+}
+
+.pic-title .pic-title-content-right {
+  color: #999;
+}
+
+.pic-title .pic-title-content-right-count {
+  color: #fb0000;
+}
+
+.pic-content {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60rpx;
+  margin-bottom: 60rpx;
+}
+
+.pic-content .camera {
+  width: 175rpx;
+  height: 175rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+  position: relative;
+  margin-top: 20rpx;
+}
+
+.pic-content .camera .img {
+  width: 74rpx;
+  height: 54rpx;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
+.pic-content .each-img {
+  overflow: visible;
+  margin-left: 10rpx;
+  width: 175rpx;
+  height: 175rpx;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.pic-content .each-img .delete-icon {
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  right: 5rpx;
+  top: 0rpx;
+  width: 38rpx;
+  height: 38rpx;
+}
