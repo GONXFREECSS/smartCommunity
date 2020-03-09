@@ -36,6 +36,22 @@ Page({
         cb: 'repair'
       }
     ],
+    notices:[
+      {
+        title:'物业扫雪，温暖业主',
+        id:'',
+        img:'/img/saoxue.jpg',
+        time:'2020-03-09 16:54',
+        cb:'notice'
+      },
+      {
+        id:'',
+        title:'防控疫情我们在行动',
+        img:'/img/yiqing.jpeg',
+        time:'2020-03-09 16:54',
+        cb:'notice'
+      },
+    ],
     show: false,
     text: ''
   },

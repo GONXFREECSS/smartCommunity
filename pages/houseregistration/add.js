@@ -102,7 +102,7 @@ Page({
       success: function (res) {
         let tempFilePaths = res.tempFilePaths
         wx.uploadFile({
-          url: 'http://r7mgyt.natappfree.cc/api/sqwuye/common/upload', //仅为示例，非真实的接口地址
+          url: 'http://134.175.114.99/api/sqwuye/common/upload', //仅为示例，非真实的接口地址
           filePath: tempFilePaths[0],
           name: 'file',
           header: {
@@ -112,7 +112,7 @@ Page({
           success (res){
             var data =JSON.parse(res.data);
             imgs.push(data.url)
-            pics.push('http://r7mgyt.natappfree.cc/'+data.url)
+            pics.push('http://134.175.114.99/'+data.url)
             console.log(imgs)
             that.setData({
               img:imgs,
@@ -210,7 +210,7 @@ Page({
   getCommunity() { // 获取社区数据
     var that = this;
     wx.request({
-      url: 'http://r7mgyt.natappfree.cc/api/sqwuye/sq/getAllSqList',
+      url: 'http://134.175.114.99/api/sqwuye/sq/getAllSqList',
       method: 'get',
       header: {
         'Authorization': token
@@ -249,7 +249,7 @@ Page({
       currnetProvinceKey: code  // 保存当前选择的市级code
     })
     wx.request({
-      url: 'http://r7mgyt.natappfree.cc/api/sqwuye/louDong/getLouDongList',
+      url: 'http://134.175.114.99/api/sqwuye/louDong/getLouDongList',
       data: { sqId: code },
       method: 'post',
       header: {
@@ -284,7 +284,7 @@ Page({
       currnetCityKey: code // 更新当前选择的市级key
     })
     wx.request({
-      url: 'http://r7mgyt.natappfree.cc/api/sqwuye/houses/getRoomName',
+      url: 'http://134.175.114.99/api/sqwuye/houses/getRoomName',
       data: { louDongId: code },
       method: 'post',
       header: {

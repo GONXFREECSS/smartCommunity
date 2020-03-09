@@ -1,50 +1,43 @@
 <view class="page">
-  <!--页头-->
+  <!-- 页头 -->
   <view class="page__hd">
     <ad-swiper indicatorDots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"></ad-swiper>
   </view>
-  <view class="page__bd">
-    <view class='weui-flex'>
-    <!-- <view class="title"><text>社区服务</text></view> -->
-      <block wx:for="{{communityservice}}" wx:for-index="idx" wx:key="idx">
-        <view class='search-group' bindtap='{{item.cb}}'>
-          <image src='{{item.img}}'></image>
-          <view class='text'>{{item.text}}</view>
+  <!-- <view class="title"><text>社区服务</text></view> -->
+  <block wx:if="{{communityservice}}">
+    <view class="tool-card">
+      <view class="at-row at-row__justify--between">
+        <view class="tool-title at-col at-col-5">
+          <text>智慧门禁</text>
         </view>
-      </block>
+        <view class="tool-dots at-col at-col-5">
+          <view wx:key="i" class="dot-item" wx:for="{{$anonymousCallee__21}}" wx:for-item="i" wx:for-index="_anonIdx2"></view>
+        </view>
+      </view>
+      <view class="at-row list-warpper">
+        <view class="at-col at-col-3 tool-group" wx:key="i" wx:for="{{communityservice}}" wx:for-item="item" wx:for-index="i">
+          <view class="tool-img" bindtap='{{item.cb}}'>
+            <image src="{{item.img}}"></image>
+          </view>
+          <text>{{item.text}}</text>
+        </view>
+      </view>
     </view>
+  </block>
+  <view class="tool-title" style="padding-left:22px">
+    <text>通知公告</text>
   </view>
-  <view class="page__bd">
-    <view class='weui-flex'>
-    <!-- <view class="title"><text>社区服务</text></view> -->
-      <block wx:for="{{communityservice}}" wx:for-index="idx" wx:key="idx">
-        <view class='search-group' bindtap='{{item.cb}}'>
-          <image src='{{item.img}}'></image>
-          <view class='text'>{{item.text}}</view>
-        </view>
-      </block>
-    </view>
-  </view>
-  <view class="page__bd">
-    <view class='weui-flex'>
-    <!-- <view class="title"><text>社区服务</text></view> -->
-      <block wx:for="{{communityservice}}" wx:for-index="idx" wx:key="idx">
-        <view class='search-group' bindtap='{{item.cb}}'>
-          <image src='{{item.img}}'></image>
-          <view class='text'>{{item.text}}</view>
-        </view>
-      </block>
-    </view>
-  </view>
-  <view class="page__bd">
-    <view class='weui-flex'>
-    <!-- <view class="title"><text>社区服务</text></view> -->
-      <block wx:for="{{communityservice}}" wx:for-index="idx" wx:key="idx">
-        <view class='search-group' bindtap='{{item.cb}}'>
-          <image src='{{item.img}}'></image>
-          <view class='text'>{{item.text}}</view>
-        </view>
-      </block>
+  <view wx:key="i" wx:for="{{notices}}" wx:for-item="item" wx:for-index="i">
+    <view class="tool-card">
+      <view bindtap='{{item.cb}}'>
+        <image class="img" src="{{item.img}}"></image>
+      </view>
+      <view class="title">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="time">
+        <text>{{item.time}}</text>
+      </view>
     </view>
   </view>
 </view>

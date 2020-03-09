@@ -120,7 +120,7 @@ Page({
     data = JSON.stringify(data);
     console.log(data)
     wx.request({
-      url: 'http://r7mgyt.natappfree.cc/api/sqwuye/sys/repairs/save',
+      url: 'http://134.175.114.99/api/sqwuye/sys/repairs/save',
       data: '\r\n--XXX' +
       '\r\nContent-Disposition: form-data; name="repairs"' +
       '\r\n' +

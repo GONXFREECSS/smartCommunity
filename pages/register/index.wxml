@@ -1,0 +1,33 @@
+<view class="container">
+    <view class="login-icon">
+        <image class="login-img" src="/img/register.png"></image>
+    </view>
+    <view class="login-from">
+        <form bindsubmit="formSubmit">
+            <!-- 手机号 -->
+            <view class="inputView">
+                <image class="nameImage" src="/img/phone.png"></image>
+                <input class="inputText" name='username' value="{{username}}" placeholder="请输入手机号" bindinput="usernameInput" />
+            </view>
+            <view class="inputView">
+                <image class="nameImage" src="/img/yanzhengma.png"></image>
+                <input class="inputText" name='username' value="{{username}}" placeholder="请输入验证码" bindinput="usernameInput">
+                <button size="{{primarySize}}" bindtap='code'>
+                    发送验证码
+                </button>
+                </input>
+            </view>
+            <!-- 密码 -->
+            <view class="inputView">
+                <image class="keyImage" src="/img/u2.png"></image>
+                <input class="inputText" name='password' password="true" value="{{password}}" placeholder="请设置登录密码" bindinput="passwordInput" />
+            </view>
+            <!-- 按钮 -->
+            <view class="loginBtnView">
+                <button class="loginBtn" size="{{primarySize}}" form-type='submit' disabled='{{disabled}}'>
+                    立即注册
+                </button>
+            </view>
+        </form>
+    </view>
+</view>

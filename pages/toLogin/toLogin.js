@@ -24,6 +24,11 @@ Page({
     })
     console.log(e.detail.value);
   },
+  register:function(){
+    wx.redirectTo({
+      url: '/pages/register/index'
+    })
+  },
   formSubmit: function (e) {
     var data = e.detail.value;
     var that = this;

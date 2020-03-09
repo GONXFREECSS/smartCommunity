@@ -6,10 +6,11 @@ var util = require('../../utils/util.js');
 Page({
   data: {
     admin: null,
-    userInfo: app.globalData.userInfo
+    userInfo: wx.getStorageSync('userInfo')
   },
   onLoad: function () {
-    
+    console.log('ddd')
+    console.log(wx.getStorageSync('userInfo'))
   },
   onShow: function () {
 

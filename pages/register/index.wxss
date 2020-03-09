@@ -96,8 +96,6 @@ page{
    
     flex: block; 
    
-    float: right; 
-   
     text-align: right; 
    
     margin-right: 22px; 
@@ -172,24 +170,8 @@ page{
    
     background-color:#1296db;
    
-    margin-top: 35px; 
+    margin-top: 35px;
+    
     color: white;
-   
-   }
-   
-   .registerBtn { 
-   
-    width: 50%; 
-   
-    height:40px;
-   
-    color:#1296db;
-   
-    background-color: #f2f2f2;
-   
-    margin-top: 35px; 
-   
-    border:none;
-   
    }
    

@@ -5,7 +5,9 @@
     "pages/repair/add",
     "pages/my/index",
     "pages/houseregistration/index",
-    "pages/houseregistration/add"
+    "pages/houseregistration/add",
+    "pages/register/index",
+    "pages/notice/index"
   ],
   "permission": {
     "scope.userLocation": {
@@ -38,7 +40,7 @@
         "selectedIconPath": "img/shop2.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/notice/index",
         "text": "动态",
         "iconPath": "img/dynamic.png",
         "selectedIconPath": "img/dynamic2.png"

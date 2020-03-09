@@ -4,7 +4,7 @@
     <view class="head">
       <view>
         <navigator wx:if="{{userInfo}}" url="/pages/my/info">
-          <image src="{{userInfo.avatarUrl}}"></image>
+          <image src="/img/touxiang.jpg"></image>
         </navigator>
         <navigator class="no-login" wx:else url="/pages/toLogin/toLogin">
           <image src=""></image>

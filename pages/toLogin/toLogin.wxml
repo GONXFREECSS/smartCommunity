@@ -24,7 +24,7 @@
                 </button>
             </view>
             <view class="registerBtnView">
-                <button class="registerBtn" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="register">
+                <button class="registerBtn" size="{{primarySize}}" disabled="{{disabled}}" bindtap="register">
                     注册
                 </button>
             </view>
