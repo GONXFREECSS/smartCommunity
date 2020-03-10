@@ -49,9 +49,6 @@ page{
    .login-from { 
    
     margin-top: 20px; 
-   
-    flex: auto; 
-   
     height:100%; 
    
    } 
@@ -61,16 +58,15 @@ page{
    .inputView { 
    
     background-color: #fff; 
-   
     line-height: 44px; 
-   
+    border-radius: 5px;
    } 
    
    /*输入框*/
    
    .nameImage, .keyImage { 
    
-    margin-left: 18px; 
+    margin-left: 5px; 
    
     margin-top:10px;
    
@@ -96,7 +92,9 @@ page{
    
     flex: block; 
    
-    text-align: right; 
+    float: right; 
+   
+    text-align: left; 
    
     margin-right: 22px; 
    

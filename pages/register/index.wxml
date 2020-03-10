@@ -7,15 +7,15 @@
             <!-- 手机号 -->
             <view class="inputView">
                 <image class="nameImage" src="/img/phone.png"></image>
-                <input class="inputText" name='username' value="{{username}}" placeholder="请输入手机号" bindinput="usernameInput" />
+                <input class="inputText" name='phone' value="{{phone}}" placeholder="请输入手机号" bindinput="phoneInput" />
             </view>
             <view class="inputView">
                 <image class="nameImage" src="/img/yanzhengma.png"></image>
-                <input class="inputText" name='username' value="{{username}}" placeholder="请输入验证码" bindinput="usernameInput">
-                <button size="{{primarySize}}" bindtap='code'>
-                    发送验证码
-                </button>
+                <input class="inputText" name='code' value="{{code}}" placeholder="请输入验证码" bindinput="codeInput">
                 </input>
+                <button style="background-color:{{color}};font-color:white" bindtap='sendcode' disabled='{{disabled}}'>
+                    {{text}}
+                </button>
             </view>
             <!-- 密码 -->
             <view class="inputView">
@@ -24,7 +24,7 @@
             </view>
             <!-- 按钮 -->
             <view class="loginBtnView">
-                <button class="loginBtn" size="{{primarySize}}" form-type='submit' disabled='{{disabled}}'>
+                <button class="loginBtn" size="{{primarySize}}" form-type='submit'>
                     立即注册
                 </button>
             </view>

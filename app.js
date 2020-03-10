@@ -72,8 +72,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null,
-    sk: null,
+    userInfo: '',
+    sk: '',
     URL: "http://134.175.114.99",
     // URL: "https://happy.ngrok2.xiaomiqiu.cn/weixin",
     ad: [],

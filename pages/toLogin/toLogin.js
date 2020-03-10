@@ -37,12 +37,10 @@ Page({
     util.getReq('api/denglu/login', data, function (data) {
       console.log(data.token)
       if(data.code==0){
-        wx.setStorage({
-          key: "token",
-          data: data.token
-        })
-        app.setUserInfo({nickName:'admin'})
-        console.log(wx.getStorage('token'))
+        wx.setStorageSync('token',data.token)
+        var data = {'nickName':'User','img':'/img/touxiang.jpg'}
+        app.setUserInfo(data)
+        console.log(app.globalData.userInfo)
         wx.switchTab({
           url: '/pages/index/index'
         })

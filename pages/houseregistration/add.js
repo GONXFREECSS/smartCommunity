@@ -308,6 +308,7 @@ Page({
     })
   },
   onLoad: function (options) {
+    console.log(token)
     this.getCommunity()
   },
   onShow() {
