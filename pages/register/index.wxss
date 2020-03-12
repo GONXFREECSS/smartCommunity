@@ -104,7 +104,10 @@ page{
    
     font-size: 14px
    
-   } 
+   }
+   .codeBtn{
+     color: white;
+   }
    
      
    

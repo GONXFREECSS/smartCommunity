@@ -161,6 +161,6 @@ Page({
 
   },
   onShow() {
-
+    app.hasLogin()
   }
 })

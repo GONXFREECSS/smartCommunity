@@ -7,6 +7,7 @@
     "pages/houseregistration/index",
     "pages/houseregistration/add",
     "pages/register/index",
+    "pages/shop/index",
     "pages/notice/index"
   ],
   "permission": {
@@ -34,7 +35,7 @@
         "selectedIconPath": "img/index2.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/shop/index",
         "text": "商城",
         "iconPath": "img/shop.png",
         "selectedIconPath": "img/shop2.png"

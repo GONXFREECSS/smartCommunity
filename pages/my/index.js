@@ -9,20 +9,25 @@ Page({
     userInfo: '',
   },
   onLoad: function () {
-    var that = this;
-      wx.showLoading({
-         title: '加载中',
-      })
-     setTimeout(function () {
-       console.log(wx.getStorageSync('userInfo'))
-        that.setData({
-           userInfo : wx.getStorageSync('userInfo')
-        })
-       wx.hideLoading()
-     }, 1000)
+
   },
   onShow: function () {
-    
+    var that = this;
+    wx.getStorage({
+      key: 'userInfo',
+      success: function (res) {
+        console.log(app.globalData.userInfo)
+        console.log(res.data)
+        if (!app.globalData.userInfo) {
+          that.setData({
+            userInfo: res.data
+          })
+        }
+      },
+      fail: function (res) {
+        // app.login();
+      }
+    });
   },
-  
+
 })

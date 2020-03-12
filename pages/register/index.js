@@ -49,7 +49,7 @@ Page({
       })
     } else {
       wx.request({
-        url: 'http://d24hsk.natappfree.cc/api/denglu/phoneCaptcha?phone=' + phone, //仅为示例，并非真实的接口地址
+        url: 'http://gy7d4s.natappfree.cc/api/denglu/phoneCaptcha?phone=' + phone, //仅为示例，并非真实的接口地址
         method: 'get',
         success(res) {
           var data = res.data
@@ -111,7 +111,7 @@ Page({
       return false;
     }
     wx.request({
-      url: 'http://d24hsk.natappfree.cc/api/denglu/register', //仅为示例，并非真实的接口地址
+      url: 'http://gy7d4s.natappfree.cc/api/denglu/register', //仅为示例，并非真实的接口地址
       data: data,
       method: 'post',
       header: {

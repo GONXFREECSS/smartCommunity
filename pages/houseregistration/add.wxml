@@ -62,8 +62,11 @@
               <view class='right' wx:if="{{multiArray[2][multiIndex[2]] && step == 0}}">
                 <text class="weui-input">请选择房屋</text>
               </view>
-              <view class="picker" wx:if="{{multiArray[2][multiIndex[2]] && step == 1}}">
+              <view class="picker" wx:elif="{{multiArray[2][multiIndex[2]] && step == 1}}">
                 <text class="weui-input">{{multiArray[2][multiIndex[2]]}}</text>
+              </view>
+              <view class="picker" wx:else>
+                <text class="weui-input">请选择房屋</text>
               </view>
             </picker>
           </view>

@@ -9,8 +9,8 @@ Page({
     phone: '',
     idCard: '',
     housesId: '',
-    img:[],
-    pics:[],
+    img: [],
+    pics: [],
     idTypes: [{ id: '', name: '请选择证件类型' }, { id: 0, name: '身份证' }],
     idType: 0,
     items: [
@@ -109,14 +109,14 @@ Page({
             'content-type': 'multipart/form-data',
             'Authorization': token
           },
-          success (res){
-            var data =JSON.parse(res.data);
+          success(res) {
+            var data = JSON.parse(res.data);
             imgs.push(data.url)
-            pics.push('http://134.175.114.99/'+data.url)
+            pics.push('http://134.175.114.99/' + data.url)
             console.log(imgs)
             that.setData({
-              img:imgs,
-              pics:pics
+              img: imgs,
+              pics: pics
             })
             //do something
           }
@@ -126,17 +126,17 @@ Page({
 
   },
 
-  delete_this(e){
-    var index= e.currentTarget.dataset.src
+  delete_this(e) {
+    var index = e.currentTarget.dataset.src
     var imgs = this.data.img
     var pics = this.data.pics
     console.log(imgs)
-    imgs.splice(index,1)
-    pics.splice(index,1)
+    imgs.splice(index, 1)
+    pics.splice(index, 1)
     console.log(imgs)
     this.setData({
-      img:imgs,
-      pics:pics
+      img: imgs,
+      pics: pics
     })
   },
   formSubmit: function (e) {
@@ -308,10 +308,21 @@ Page({
     })
   },
   onLoad: function (options) {
-    console.log(token)
-    this.getCommunity()
+
   },
   onShow() {
+    var that = this;
+    app.hasLogin(function () {
+      wx.getStorage({
+        key: 'token',
+        success: function (res) {
+          token = res.data
+          that.getCommunity()
+        }
+      });
+    })
+
 
   }
+
 })
