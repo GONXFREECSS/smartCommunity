@@ -2,7 +2,7 @@
     <view class="goods-box">
         <image src="{{goods.image}}" class="goods-thumb"></image>
         
-        <navigator open-type="switchTab" url="../cart/cart">
+        <navigator url="pages/shop/cart/cart">
             <view class="carts-icon {{scaleCart?'on':''}}">
                 <image src="/img/cart2.png"></image>
                 <text class="carts-icon-num" wx:if="{{hasCarts}}">{{totalNum}}</text>

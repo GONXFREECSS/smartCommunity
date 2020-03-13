@@ -3,7 +3,7 @@ Page({
   data:{
     goods: {
       id: 1,
-      image: '/img/goods1.png',
+      image: 'https://nginx.ngrok2.xiaomiqiu.cn/images/goods1.png',
       title: '新鲜梨花带雨',
       price: 0.01,
       stock: '有货',

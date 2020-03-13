@@ -7,14 +7,14 @@ Page({
             {
                 id: 1,
                 url: '../details/details',
-                thumb: '/img/s4.png',
+                thumb: 'https://nginx.ngrok2.xiaomiqiu.cn/images/s4.png',
                 title: '瓜子 100g',
                 price: 0.01
             },
             {
                 id: 2,
                 url: '../details/details',
-                thumb: '/img/s5.png',
+                thumb: 'https://nginx.ngrok2.xiaomiqiu.cn/images/s5.png',
                 title: '新鲜芹菜 500g',
                 price: 0.02
             }

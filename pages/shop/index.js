@@ -1,9 +1,9 @@
 Page({
   data: {
     imgUrls: [
-      '/img/b1.jpg',
-      '/img/b2.jpg',
-      '/img/b3.jpg'
+      'https://nginx.ngrok2.xiaomiqiu.cn/images/b1.jpg',
+      'https://nginx.ngrok2.xiaomiqiu.cn/images/b2.jpg',
+      'https://nginx.ngrok2.xiaomiqiu.cn/images/b3.jpg'
     ],
     indicatorDots: false,
     autoplay: false,

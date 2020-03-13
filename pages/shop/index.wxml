@@ -19,18 +19,18 @@
         <view class="select-top">
             <view class="select-top-small">
                 <navigator url="list/list">
-                    <image src="/img/s1.png"></image>
+                    <image src="https://nginx.ngrok2.xiaomiqiu.cn/images/s1.png"></image>
                 </navigator>
             </view>
             <view class="select-top-small">
                 <navigator url="list/list">
-                    <image src="/img/s2.png"></image>
+                    <image src="https://nginx.ngrok2.xiaomiqiu.cn/images/s2.png"></image>
                 </navigator>
             </view>
         </view>
         <view class="select-bottom">
             <navigator url="list/list">
-                <image src="/img/s3.png"></image>
+                <image src="https://nginx.ngrok2.xiaomiqiu.cn/images/s3.png"></image>
             </navigator>
         </view>
     </view>
@@ -39,63 +39,63 @@
         <view class="newest-box">
             <view class="newest-list">
                 <navigator url="details/details">
-                    <image src="/img/s4.png"></image>
+                    <image src="https://nginx.ngrok2.xiaomiqiu.cn/images/s4.png"></image>
                     <view class="newest-text"><text>瓜子 100g</text></view>
                     <view class="newest-text"><text>￥ 0.01</text></view>
                 </navigator>
             </view>
             <view class="newest-list">
                 <navigator url="details/details">
-                    <image src="/img/s5.png"></image>
+                    <image src="https://nginx.ngrok2.xiaomiqiu.cn/images/s5.png"></image>
                     <view class="newest-text"><text>芹菜 半斤</text></view>
                     <view class="newest-text"><text>￥ 0.02</text></view>
                 </navigator>
             </view>
             <view class="newest-list">
                 <navigator url="details/details">
-                    <image src="/img/s6.png"></image>
+                    <image src="https://nginx.ngrok2.xiaomiqiu.cn/images/s6.png"></image>
                     <view class="newest-text"><text>素米 375g</text></view>
                     <view class="newest-text"><text>￥ 0.03</text></view>
                 </navigator>
             </view>
             <view class="newest-list">
                 <navigator url="details/details">
-                    <image src="/img/s4.png"></image>
+                    <image src="https://nginx.ngrok2.xiaomiqiu.cn/images/s4.png"></image>
                     <view class="newest-text"><text>瓜子 100g</text></view>
                     <view class="newest-text"><text>￥ 0.01</text></view>
                 </navigator>
             </view>
             <view class="newest-list">
                 <navigator url="details/details">
-                    <image src="/img/s5.png"></image>
+                    <image src="https://nginx.ngrok2.xiaomiqiu.cn/images/s5.png"></image>
                     <view class="newest-text"><text>芹菜 半斤</text></view>
                     <view class="newest-text"><text>￥ 0.02</text></view>
                 </navigator>
             </view>
             <view class="newest-list">
                 <navigator url="details/details">
-                    <image src="/img/s6.png"></image>
+                    <image src="https://nginx.ngrok2.xiaomiqiu.cn/images/s6.png"></image>
                     <view class="newest-text"><text>素米 375g</text></view>
                     <view class="newest-text"><text>￥ 0.03</text></view>
                 </navigator>
             </view>
             <view class="newest-list">
                 <navigator url="details/details">
-                    <image src="/img/s4.png"></image>
+                    <image src="https://nginx.ngrok2.xiaomiqiu.cn/images/s4.png"></image>
                     <view class="newest-text"><text>瓜子 100g</text></view>
                     <view class="newest-text"><text>￥ 0.01</text></view>
                 </navigator>
             </view>
             <view class="newest-list">
                 <navigator url="details/details">
-                    <image src="/img/s5.png"></image>
+                    <image src="https://nginx.ngrok2.xiaomiqiu.cn/images/s5.png"></image>
                     <view class="newest-text"><text>芹菜 半斤</text></view>
                     <view class="newest-text"><text>￥ 0.02</text></view>
                 </navigator>
             </view>
             <view class="newest-list">
                 <navigator url="details/details">
-                    <image src="/img/s6.png"></image>
+                    <image src="https://nginx.ngrok2.xiaomiqiu.cn/images/s6.png"></image>
                     <view class="newest-text"><text>素米 375g</text></view>
                     <view class="newest-text"><text>￥ 0.03</text></view>
                 </navigator>
