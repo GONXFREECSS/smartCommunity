@@ -312,16 +312,14 @@ Page({
   },
   onShow() {
     var that = this;
-    app.hasLogin(function () {
-      wx.getStorage({
-        key: 'token',
-        success: function (res) {
-          token = res.data
-          that.getCommunity()
-        }
-      });
-    })
-
+    app.hasLogin()
+    wx.getStorage({
+      key: 'token',
+      success: function (res) {
+        token = res.data
+        that.getCommunity()
+      }
+    });
 
   }
 

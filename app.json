@@ -1,13 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/repair/index",
-    "pages/repair/add",
     "pages/my/index",
-    "pages/houseregistration/index",
-    "pages/houseregistration/add",
-    "pages/register/index",
-    "pages/shop/index",
+    "pages/shop/index/index",
+    "pages/shop/shop-cart/index",
     "pages/notice/index"
   ],
   "permission": {
@@ -35,10 +31,16 @@
         "selectedIconPath": "img/index2.png"
       },
       {
-        "pagePath": "pages/shop/index",
+        "pagePath": "pages/shop/index/index",
         "text": "商城",
         "iconPath": "img/shop.png",
         "selectedIconPath": "img/shop2.png"
+      },
+      {
+        "pagePath": "pages/shop/shop-cart/index",
+        "text": "购物车",
+        "iconPath": "img/cart.png",
+        "selectedIconPath": "img/cart2.png"
       },
       {
         "pagePath": "pages/notice/index",
