@@ -3,8 +3,8 @@
   <view class="page__hd">
     <view class="head">
       <view>
-        <navigator wx:if="{{userInfo.nickName}}" url="/pages/my/info">
-          <image src="/img/touxiang.jpg"></image>
+        <navigator wx:if="{{userInfo}}" url="/pages/my/info">
+          <image src="{{userInfo.wechatAvatar?userInfo.wechatAvatar:'../../img/touxiang.jpg'}}"></image>
         </navigator>
         <navigator class="no-login" wx:else url="/pages/toLogin/toLogin">
           <image src=""></image>
@@ -12,7 +12,7 @@
         </navigator>
       </view>
       <view>
-        <text style="color: #fff;">{{userInfo.nickName}}</text>
+        <text style="color: #fff;">{{userInfo.wechatName?userInfo.wechatName:userInfo.phone}}</text>
       </view>
     </view>
   </view>

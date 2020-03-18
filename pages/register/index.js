@@ -49,7 +49,7 @@ Page({
       })
     } else {
       wx.request({
-        url: 'http://gy7d4s.natappfree.cc/api/denglu/phoneCaptcha?phone=' + phone, //仅为示例，并非真实的接口地址
+        url: app.globalData.URL+'/api/sqwuye/app/weChat/phoneCaptcha?phone=' + phone, //仅为示例，并非真实的接口地址
         method: 'get',
         success(res) {
           var data = res.data
@@ -88,7 +88,6 @@ Page({
   },
   formSubmit(e) {
     var data = e.detail.value;
-    data.username = data.phone
     var that = this;
     console.log(data);
     if (data.phone == '') {
@@ -111,7 +110,7 @@ Page({
       return false;
     }
     wx.request({
-      url: 'http://gy7d4s.natappfree.cc/api/denglu/register', //仅为示例，并非真实的接口地址
+      url: 'http://hvq77q.natappfree.cc/api/sqwuye/app/weChat/register', //仅为示例，并非真实的接口地址
       data: data,
       method: 'post',
       header: {

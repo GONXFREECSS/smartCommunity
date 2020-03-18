@@ -8,7 +8,7 @@
             <view class="inputView">
                 <image class="nameImage" src="/img/u1.png"></image>
                 <label class="loginLab">用户名</label>
-                <input class="inputText" name='username' value="{{username}}" placeholder="请输入用户名" bindinput="usernameInput" />
+                <input class="inputText" name='phone' value="{{phone}}" placeholder="请输入用户名" bindinput="usernameInput" />
             </view>
             <view class="line"></view>
             <!-- 密码 -->

@@ -8,13 +8,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    username: '',
+    phone: '',
     password: ''
   },
   usernameInput: function (e) {
     console.log(e.detail.value);
     this.setData({
-      username: e.detail.value
+      phone: e.detail.value
     })
     console.log(e.detail.value);
   },
@@ -34,12 +34,12 @@ Page({
     var that = this;
     console.log(data);
 
-    util.getReq('api/denglu/login', data, function (data) {
-      console.log(data.token)
+    util.getReq('api/sqwuye/app/weChat/login', data, function (data) {
+      console.log(data)
       if(data.code==0){
         wx.setStorageSync('token',data.token)
-        var data = {'nickName':'User','img':'/img/touxiang.jpg'}
-        app.setUserInfo(data)
+        console.log(data.rep)
+        app.setUserInfo(data.rep)
         console.log(app.globalData.userInfo)
         wx.switchTab({
           url: '/pages/index/index'
