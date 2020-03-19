@@ -28,16 +28,10 @@
     <text>通知公告</text>
   </view>
   <view wx:key="i" wx:for="{{notices}}" wx:for-item="item" wx:for-index="i">
-    <view class="tool-card">
-      <view bindtap='{{item.cb}}'>
-        <image class="img" src="{{item.img}}"></image>
+    <l-card type="cover" l-class="card" image="{{item.img}}" title="{{item.title}}">
+      <view class="content">
+        一部分人回乡，一部分人把父母接到了身边,还有一部分人，干脆把假期变成了真正属于自己的时间。总有- -些科技，升级了生活方式，延展了过年形式的体验，还有一些欲...
       </view>
-      <view class="title">
-        <text>{{item.title}}</text>
-      </view>
-      <view class="time">
-        <text>{{item.time}}</text>
-      </view>
-    </view>
+    </l-card>
   </view>
 </view>

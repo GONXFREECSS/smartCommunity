@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "ad-swiper": "/component/ad-swiper/index"
+    "ad-swiper": "/component/ad-swiper/index",
+    "l-card":"/dist/card/index"
   }
 }

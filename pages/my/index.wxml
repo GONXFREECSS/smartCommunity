@@ -1,5 +1,5 @@
 <view class="page">
-  <!--页头-->
+  <!-- 页头 -->
   <view class="page__hd">
     <view class="head">
       <view>
@@ -16,18 +16,17 @@
       </view>
     </view>
   </view>
-  <!--主体-->
+  <!-- 主体 -->
   <view class="page__bd">
     <view class="list">
-
       <view class="page__bd">
         <view class="weui-cells weui-cells_after-title">
-          <navigator url="/pages/my/list" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <navigator  class="weui-cell weui-cell_access" hover-class="weui-cell_active" target="miniProgram" open-type="navigate" app-id="wx5e7d1aeefc2b3098" path="/pages/index/index" extra-data="" version="release">
             <view class="weui-cell__hd">
               <image src="/img/edit.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
             </view>
-            <view class="weui-cell__bd">我的门卡</view>
-            <view class="weui-cell__ft weui-cell__ft_in-access">{{infoCount}}</view>
+            <view class="weui-cell__bd">购物商场</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
           </navigator>
           <navigator url="/pages/my/order" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
             <view class="weui-cell__hd">
@@ -59,9 +58,7 @@
           </navigator>
         </view>
       </view>
-
-
     </view>
   </view>
-  <!--没有页脚-->
+  <!-- 没有页脚 -->
 </view>

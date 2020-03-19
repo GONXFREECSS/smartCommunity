@@ -11,8 +11,8 @@ Page({
     content: '',
     date: '',
     time: '',
-    img:[],
-    pics:[],
+    img: [],
+    pics: [],
   },
   usernameInput: function (e) {
     this.setData({
@@ -57,14 +57,14 @@ Page({
             'content-type': 'multipart/form-data',
             'Authorization': token
           },
-          success (res){
-            var data =JSON.parse(res.data);
+          success(res) {
+            var data = JSON.parse(res.data);
             imgs.push(data.url)
-            pics.push('http://r7mgyt.natappfree.cc/'+data.url)
+            pics.push('http://r7mgyt.natappfree.cc/' + data.url)
             console.log(imgs)
             that.setData({
-              img:imgs,
-              pics:pics
+              img: imgs,
+              pics: pics
             })
             //do something
           }
@@ -74,17 +74,17 @@ Page({
 
   },
 
-  delete_this(e){
-    var index= e.currentTarget.dataset.src
+  delete_this(e) {
+    var index = e.currentTarget.dataset.src
     var imgs = this.data.img
     var pics = this.data.pics
     console.log(imgs)
-    imgs.splice(index,1)
-    pics.splice(index,1)
+    imgs.splice(index, 1)
+    pics.splice(index, 1)
     console.log(imgs)
     this.setData({
-      img:imgs,
-      pics:pics
+      img: imgs,
+      pics: pics
     })
   },
   formSubmit: function (e) {
@@ -115,17 +115,17 @@ Page({
     data.code = that.data.code;
     data.isSolved = 0;
     data.img = that.data.img.join(',')
-    data.faultTime = data.date + " " + data.time+':00'
+    data.faultTime = data.date + " " + data.time + ':00'
 
     data = JSON.stringify(data);
-    console.log(data)
+    console.log(token)
     wx.request({
       url: 'http://134.175.114.99/api/sqwuye/sys/repairs/save',
       data: '\r\n--XXX' +
-      '\r\nContent-Disposition: form-data; name="repairs"' +
-      '\r\n' +
-      '\r\n' + data +
-      '\r\n--XXX--',
+        '\r\nContent-Disposition: form-data; name="repairs"' +
+        '\r\n' +
+        '\r\n' + data +
+        '\r\n--XXX--',
       method: 'post',
       header: {
         'Content-Type': 'multipart/form-data; boundary=XXX',
@@ -137,7 +137,7 @@ Page({
           wx.showToast({
             title: '提交成功',
             icon: 'success',
-            duration:10000
+            duration: 10000
           })
           wx.switchTab({
             url: '/pages/index/index'
@@ -161,6 +161,12 @@ Page({
 
   },
   onShow() {
+    wx.getStorage({
+      key: 'token',
+      success: function (res) {
+        token = res.data
+      }
+    })
     app.hasLogin({})
   }
 })

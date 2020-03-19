@@ -17,9 +17,9 @@ function formatNumber(n) {
 
 // var rootDocment = 'https://happy.ngrok2.xiaomiqiu.cn/weixin/';
 var rootDocment = 'http://134.175.114.99/'
-var token = wx.getStorageSync('token')
+var token = wx.getStorageSync("token")
+console.log(token)
 function req(url, data, cb) {
-  var token = wx.getStorageSync('token')
   console.log(token)
   wx.request({
     url: rootDocment + url,
