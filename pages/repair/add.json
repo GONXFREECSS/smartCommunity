@@ -1,3 +1,7 @@
 {
-  "navigationBarTitleText": "物业报修"
+  "navigationBarTitleText": "物业报修",
+  "usingComponents": {
+    "l-textarea":"/dist/textarea/index",
+    "image-picker":"/dist/image-picker/index"
+  }
 }

@@ -15,26 +15,44 @@ Page({
         name: 'issue',
         img: '/img/opendoor.svg',
         text: '远程开门',
-        cb: 'issue'
+        url:"",
       },
       {
         name: 'car',
-        img: '/img/pwd.svg',
-        text: '动态密码',
-        cb: 'car'
+        img: '/img/repair.svg',
+        text: '报修工单',
+        url:"../repair/add",
       },
       {
         name: 'houseregistration',
         img: '/img/house.svg',
         text: '房屋登记',
-        cb: 'houseregistration'
+        url:"../houseregistration/add",
       },
       {
         name: 'repair',
-        img: '/img/repair.svg',
-        text: '物业报修',
-        cb: 'repair'
-      }
+        img: '/img/dongtai.svg',
+        text: '发布动态',
+        url:"",
+      },
+      {
+        name: 'issue',
+        img: '/img/car.svg',
+        text: '停车缴费',
+        url:"",
+      },
+      {
+        name: 'tousu',
+        img: '/img/tousu.svg',
+        text: '投诉反馈',
+        url:"",
+      },
+      {
+        name: 'kefu',
+        img: '/img/kefu.svg',
+        text: '联系客服',
+        url:"",
+      },
     ],
     notices:[
       {
@@ -54,6 +72,14 @@ Page({
     ],
     show: false,
     text: ''
+  },
+  not(){
+    wx.lin.showDialog({
+      type:"alert",     
+      title:"温馨提示",
+      content:"此功能正在开发中，敬请期待" ,
+
+    })
   },
   isLogin: function() {
     return new Promise((resolve, reject) => {
@@ -79,16 +105,7 @@ Page({
       }
     })
   },
-  repair: function() {
-    wx.navigateTo({
-      url: '/pages/repair/add',
-    })
-  },
-  houseregistration: function(){
-    wx.navigateTo({
-      url: '/pages/houseregistration/add',
-    })
-  },
+  
   onShow: function() {},
   onLoad: function() {},
 })

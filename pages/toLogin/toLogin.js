@@ -16,13 +16,11 @@ Page({
     this.setData({
       phone: e.detail.value
     })
-    console.log(e.detail.value);
   },
   passwordInput: function (e) {
     this.setData({
       password: e.detail.value
     })
-    console.log(e.detail.value);
   },
   register:function(){
     wx.redirectTo({

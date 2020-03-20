@@ -30,7 +30,6 @@ App({
       success: function (res) {
         //划分分类
         var _data = res.data.data, _tlist = [];
-        console.log(_data)
         //选出一级分类，放入firstType
         for (var x in _data) {
           if (_data[x].pid == 0) {
@@ -87,7 +86,6 @@ App({
           }
         }
         self.globalData.tlist = _tlist;
-        console.log(self.globalData.tlist)
       }
     })
   },

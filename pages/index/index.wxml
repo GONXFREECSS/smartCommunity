@@ -4,7 +4,7 @@
     <ad-swiper indicatorDots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"></ad-swiper>
   </view>
   <!-- <view class="title"><text>社区服务</text></view> -->
-  <block wx:if="{{communityservice}}">
+  <!-- <block wx:if="{{communityservice}}">
     <view class="tool-card">
       <view class="at-row at-row__justify--between">
         <view class="tool-title at-col at-col-5">
@@ -23,7 +23,26 @@
         </view>
       </view>
     </view>
-  </block>
+  </block> -->
+  <l-dialog />
+  <view class="tool-card">
+    <l-grid row-num="4" show-row-border="{{false}}">
+      <l-grid-item wx:for="{{communityservice}}" wx:key="index" key="{{index}}" slot="{{index}}" l-grid-item="grid-item">
+        <block wx:if="{{item.url!=''&&item.url!=null}}">
+          <navigator url="{{item.url}}" hover-class="none" open-type="navigate">
+            <image class="tool-img" src="{{item.img}}" />
+            <view class="text">{{item.text}}</view>
+          </navigator>
+        </block>
+        <block wx:else>
+          <view >
+          <image class="tool-img" src="{{item.img}}" bindtap="not" />
+          <view class="text">{{item.text}}</view>
+          </view>
+        </block>
+      </l-grid-item>
+    </l-grid>
+  </view>
   <view class="tool-title" style="padding-left:22px">
     <text>通知公告</text>
   </view>

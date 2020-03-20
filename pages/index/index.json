@@ -1,6 +1,11 @@
 {
   "usingComponents": {
     "ad-swiper": "/component/ad-swiper/index",
-    "l-card":"/dist/card/index"
+    "l-card":"/dist/card/index",
+    "l-icon": "/dist/icon/index",
+    "l-avatar":"/dist/avatar/index",
+    "l-grid":"/dist/grid/index",
+    "l-grid-item": "/dist/grid-item/index",
+    "l-dialog":"/dist/dialog/index"
   }
 }

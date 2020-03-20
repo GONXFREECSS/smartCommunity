@@ -1,4 +1,7 @@
 {
   "disableScroll":true,  
-  "navigationBarTitleText": "我的"
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "l-avatar":"/dist/avatar/index"
+  }
 }

@@ -4,15 +4,11 @@
     <view class="head">
       <view>
         <navigator wx:if="{{userInfo}}" url="/pages/my/info">
-          <image src="{{userInfo.wechatAvatar?userInfo.wechatAvatar:'../../img/touxiang.jpg'}}"></image>
+           <l-avatar size="160" placement="bottom" text="{{userInfo.nickName}}" src="{{userInfo.avatarUrl}}" />
         </navigator>
-        <navigator class="no-login" wx:else url="/pages/toLogin/toLogin">
-          <image src=""></image>
-          <text>请先进行登录</text>
-        </navigator>
-      </view>
-      <view>
-        <text style="color: #fff;">{{userInfo.wechatName?userInfo.wechatName:userInfo.phone}}</text>
+        <view wx:else>
+          <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="login">授权登录</button>
+        </view>
       </view>
     </view>
   </view>

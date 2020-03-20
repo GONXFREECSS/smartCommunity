@@ -4,7 +4,11 @@
     "pages/my/index",
     "pages/shop/index/index",
     "pages/shop/shop-cart/index",
-    "pages/notice/index"
+    "pages/notice/index",
+    "pages/houseregistration/add",
+    "pages/repair/add",
+    "pages/repair/index",
+    "pages/houseregistration/index"
   ],
   "permission": {
     "scope.userLocation": {

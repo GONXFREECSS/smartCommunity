@@ -7,6 +7,7 @@ Page({
   data: {
     admin: null,
     userInfo: '',
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   onLoad: function () {
 
@@ -22,7 +23,7 @@ Page({
           that.setData({
             userInfo: res.data
           })
-        }else{
+        } else {
           that.setData({
             userInfo: app.globalData.userInfo
           })
@@ -33,5 +34,44 @@ Page({
       }
     });
   },
-
+  login(e) {
+    var that = this
+    var userInfo = e.detail.userInfo
+    wx.login({
+      success(res) {
+        if (res.code) {
+          console.log(res.code)
+          //发起网络请求
+          wx.request({
+            url: 'http://bxipbn.natappfree.cc/api/sqwuye/app/weChat/login',
+            data: {
+              code: res.code,
+              weChatUser: e.detail.userInfo,
+            },
+            success: function (res) {
+              if (res.data.code == 0) {
+                console.log(res)
+                wx.setStorage({
+                  key:"token",
+                  data:res.data.token
+                })
+                app.setUserInfo(userInfo)
+                that.setData({
+                  userInfo: userInfo
+                })
+              } else {
+                wx.showToast({
+                  title: res.data.msg,
+                  icon: 'none',
+                  duration: 2000
+                })
+              }
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    })
+  }
 })
