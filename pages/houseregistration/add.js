@@ -176,7 +176,7 @@ Page({
     }
 
     wx.request({
-      url: 'http://r7mgyt.natappfree.cc/api/sqwuye/app/isVerify/add',
+      url: 'http://134.175.114.99/app/common/upload',
       data: data,
       method: 'post',
       header: {
@@ -210,7 +210,7 @@ Page({
   getCommunity() { // 获取社区数据
     var that = this;
     wx.request({
-      url: 'http://134.175.114.99/api/sqwuye/sq/getAllSqList',
+      url: 'http://134.175.114.99/api/sqwuye/app/sq/getAllSqList',
       method: 'get',
       header: {
         'Authorization': token
@@ -249,7 +249,7 @@ Page({
       currnetProvinceKey: code  // 保存当前选择的市级code
     })
     wx.request({
-      url: 'http://134.175.114.99/api/sqwuye/louDong/getLouDongList',
+      url: 'http://b869b7.natappfree.cc/api/sqwuye/app/louDong/getLouDongList',
       data: { sqId: code },
       method: 'post',
       header: {
@@ -284,7 +284,7 @@ Page({
       currnetCityKey: code // 更新当前选择的市级key
     })
     wx.request({
-      url: 'http://134.175.114.99/api/sqwuye/houses/getRoomName',
+      url: 'http://b869b7.natappfree.cc/api/sqwuye/app/houses/getRoomName',
       data: { louDongId: code },
       method: 'post',
       header: {
@@ -313,6 +313,7 @@ Page({
   onShow() {
     var that = this;
     app.hasLogin()
+    app.hasPhone()
     wx.getStorage({
       key: 'token',
       success: function (res) {

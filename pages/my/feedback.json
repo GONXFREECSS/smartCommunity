@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "投诉反馈",
+  "usingComponents": {
+    "demo-block":"/dist/demo-block/index",
+    "van-cell-group":"/dist/cell-group/index",
+    "van-field":"/dist/field/index",
+    "van-button": "/dist/button/index",
+    "van-uploader": "/dist/uploader/index",
+    "van-popup": "/dist/popup/index",
+    "l-textarea":"/dist/textarea/index",
+    "van-icon": "/dist/icon/index",
+    "van-picker":"/dist/picker/index"
+  }
+}

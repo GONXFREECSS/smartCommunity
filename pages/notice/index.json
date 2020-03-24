@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText":"消息",
+  "usingComponents": {
+    "l-status":"/dist/status-show/index"
+  }
 }

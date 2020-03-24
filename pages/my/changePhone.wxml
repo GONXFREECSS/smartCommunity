@@ -1,0 +1,16 @@
+<l-dialog />
+
+<demo-block>
+    <van-cell-group>
+        <van-field name="phone"  label="手机号码" value="{{phone}}" bind:input="phoneInput" required="{{true}}" clearable="{{true}}" />
+        <van-field value="{{code}}" label="验证码" border="{{ false }}" required="{{true}}" bind:input="codeInput" >
+            <van-button style="background-color:{{color}}"  slot="button" size="small" type="primary" bind:click="sendCode" disabled='{{disabled}}'><text style="color:white;">{{text}}</text></van-button>
+        </van-field>
+    </van-cell-group>
+</demo-block>
+<demo-block title="   ">
+    <van-button type="primary" bind:click="submit" size="large" block custom-class="demo-margin-bottom">
+       <text style="color:white;">提交</text>
+    </van-button>
+</demo-block>
+<l-toast />

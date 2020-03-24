@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText":"个人中心",
+    "usingComponents": {
+      "l-avatar":"/dist/avatar/index",
+      "van-field":"/dist/field/index",
+      "l-dialog":"/dist/dialog/index",
+      "l-button":"/dist/button/index"
+    }
+  }

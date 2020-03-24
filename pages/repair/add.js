@@ -167,6 +167,7 @@ Page({
         token = res.data
       }
     })
-    app.hasLogin({})
+    app.hasLogin()
+    app.hasPhone()
   }
 })

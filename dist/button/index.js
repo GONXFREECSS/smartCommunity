@@ -1,1 +1,68 @@
-import validator from"../behaviors/validator";Component({externalClasses:["l-class","l-label-class","l-hover-class","l-img-class","l-icon-class"],behaviors:[validator],properties:{name:{type:String,value:"lin"},type:{type:String,value:"default",options:["warning","success","error","default"]},plain:Boolean,size:{type:String,value:"medium",options:["medium","large","mini","long"]},shape:{type:String,value:"circle",options:["square","circle","semicircle"]},disabled:{type:Boolean,value:!1},special:{type:Boolean,value:!1},loading:{type:Boolean,value:!1},width:Number,height:Number,icon:String,image:String,bgColor:String,iconColor:String,iconSize:String,openType:String,appParameter:String,lang:String,hoverStopPropagation:Boolean,hoverStartTime:{type:Number,value:20},hoverStayTime:{type:Number,value:70},sessionFrom:{type:String,value:""},sendMessageTitle:String,sendMessagePath:String,sendMessageImg:String,showMessageCard:Boolean,formType:String},methods:{handleTap(){if(this.data.disabled||this.data.loading)return!1;this.triggerEvent("lintap",{},{bubbles:!0,composed:!0})},openTypeEvent(e){this.triggerEvent(e.type,e.detail,{})}}});
+import { VantComponent } from '../common/component';
+import { button } from '../mixins/button';
+import { openType } from '../mixins/open-type';
+VantComponent({
+    mixins: [button, openType],
+    classes: ['hover-class', 'loading-class'],
+    data: {
+        baseStyle: ''
+    },
+    props: {
+        icon: String,
+        plain: Boolean,
+        block: Boolean,
+        round: Boolean,
+        square: Boolean,
+        loading: Boolean,
+        hairline: Boolean,
+        disabled: Boolean,
+        loadingText: String,
+        customStyle: String,
+        loadingType: {
+            type: String,
+            value: 'circular'
+        },
+        type: {
+            type: String,
+            value: 'default'
+        },
+        size: {
+            type: String,
+            value: 'normal'
+        },
+        loadingSize: {
+            type: String,
+            value: '20px'
+        },
+        color: {
+            type: String,
+            observer(color) {
+                let style = '';
+                if (color) {
+                    style += `color: ${this.data.plain ? color : 'white'};`;
+                    if (!this.data.plain) {
+                        // Use background instead of backgroundColor to make linear-gradient work
+                        style += `background: ${color};`;
+                    }
+                    // hide border when color is linear-gradient
+                    if (color.indexOf('gradient') !== -1) {
+                        style += 'border: 0;';
+                    }
+                    else {
+                        style += `border-color: ${color};`;
+                    }
+                }
+                if (style !== this.data.baseStyle) {
+                    this.setData({ baseStyle: style });
+                }
+            }
+        }
+    },
+    methods: {
+        onClick() {
+            if (!this.data.disabled && !this.data.loading) {
+                this.$emit('click');
+            }
+        }
+    }
+});

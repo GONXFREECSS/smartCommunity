@@ -1,0 +1,7 @@
+<view>
+        <l-avatar url="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIBtzficN8xtZ71ZkFJwXGqXZJyI48vzLkIcsE8AMcKOhfV1hfzalkmqX4GsKSStiaDw8FFcXKtVxug/132" />
+        <van-field label="昵称" type="text" placeholder="请输入昵称" value="{{nickName}}" />
+        <van-field label="手机号" type="number" disabled="{{true}}" value="{{phone}}">
+            <l-button color="#007acc"  slot="button" size="small" type="primary" bind:click="changePhone"><text style="color:white;">修改手机号码</text></l-button>
+        </van-field>
+</view>

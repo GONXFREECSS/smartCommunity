@@ -43,7 +43,7 @@ Page({
           console.log(res.code)
           //发起网络请求
           wx.request({
-            url: 'http://bxipbn.natappfree.cc/api/sqwuye/app/weChat/login',
+            url: 'http://xhgzf8.natappfree.cc/api/sqwuye/app/weChat/login',
             data: {
               code: res.code,
               weChatUser: e.detail.userInfo,
@@ -55,9 +55,9 @@ Page({
                   key:"token",
                   data:res.data.token
                 })
-                app.setUserInfo(userInfo)
+                app.setUserInfo(res.data.rep)
                 that.setData({
-                  userInfo: userInfo
+                  userInfo: res.data.rep
                 })
               } else {
                 wx.showToast({

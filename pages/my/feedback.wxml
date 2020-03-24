@@ -1,0 +1,43 @@
+<!-- pages/my/feedback.wxml -->
+<l-dialog />
+<demo-block title="基本信息">
+    <van-cell-group>
+        <van-field name="userName" label="姓名" value="{{userName}}" bind:input="userNameInput" required="{{true}}" clearable="{{true}}" />
+        <van-field value="{{userPhone}}" label="手机号码" name="userPhone" required="{{true}}" bind:input="userPhoneInput" />
+        <van-field value="{{typeId}}" label="类型" name="typeId" required="{{true}}" bindtap="typeIdPicker" readonly clickable placeholder="选择类型" />
+    </van-cell-group>
+</demo-block>
+<demo-block title="地址信息">
+    <van-cell-group>
+        <van-field value="{{villagId}}" label="小区" name="villagId" required="{{true}}" bindtap="villagIdPicker" readonly clickable placeholder="选择小区" />
+        <van-field value="{{buildingId}}" label="楼栋" name="buildingId" required="{{true}}" bindtap="buildingIdPicker" readonly clickable placeholder="选择楼栋" />
+        <van-field value="{{houseId}}" label="房间" name="houseId" required="{{true}}" bindtap="houseIdPicker" readonly clickable placeholder="选择房间" />
+    </van-cell-group>
+</demo-block>
+<demo-block title='描述'>
+<van-cell-group>
+    <!-- <l-textarea indicator="{{true}}" maxlength="300" value="{{content}}" placeholder="说说你的想法吧..." bind:lininput="contentInput" /> -->
+<van-field
+    value="{{ content }}"
+    label="描述"
+    required="{{true}}"
+    maxlength="300"
+    show-word-limit = "{{true}}"
+    type="textarea"
+    placeholder="请输入描述"
+    autosize
+    border="{{ false }}"
+  />
+</van-cell-group>
+</demo-block>
+<demo-block title="上传图片" padding>
+    <van-uploader file-list="{{ imgs }}" bind:after-read="afterRead" max-count="3" />
+</demo-block>
+<demo-block title="   ">
+    <van-button type="primary" bind:click="submit" size="large" block custom-class="demo-margin-bottom">
+        <text style="color:white;">提交</text>
+    </van-button>
+</demo-block>
+<van-popup show="{{pop}}" position="bottom">
+    <van-picker columns="{{columns}}" show-toolbar bind:confirm="onConfirm" bind:cancel="onCancel" />
+</van-popup>

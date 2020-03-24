@@ -45,7 +45,7 @@ Page({
         name: 'tousu',
         img: '/img/tousu.svg',
         text: '投诉反馈',
-        url:"",
+        url:"/pages/my/feedback",
       },
       {
         name: 'kefu',

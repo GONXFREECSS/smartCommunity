@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "l-avatar":"/dist/avatar/index",
+    "l-input":"/dist/input/index",
+    "l-dialog":"/dist/dialog/index"
+  }
 }

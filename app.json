@@ -8,8 +8,15 @@
     "pages/houseregistration/add",
     "pages/repair/add",
     "pages/repair/index",
-    "pages/houseregistration/index"
+    "pages/houseregistration/index",
+    "pages/my/info",
+    "pages/my/changePhone",
+    "pages/my/feedback"
   ],
+  "usingComponents": {
+    "van-uploader": "/dist/uploader/index",
+    "van-icon":"/dist/icon/index"
+  },
   "permission": {
     "scope.userLocation": {
       "desc": "你的位置信息将用于小程序位置接口的效果展示"
@@ -39,12 +46,6 @@
         "text": "商城",
         "iconPath": "img/shop.png",
         "selectedIconPath": "img/shop2.png"
-      },
-      {
-        "pagePath": "pages/shop/shop-cart/index",
-        "text": "购物车",
-        "iconPath": "img/cart.png",
-        "selectedIconPath": "img/cart2.png"
       },
       {
         "pagePath": "pages/notice/index",

@@ -45,7 +45,6 @@ Page({
     })
     this.getBanners();
     this.getNoticeList();
-    this.getCoupons();
   },
   //根据分类获取比例
   getRatio(){

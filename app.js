@@ -6,15 +6,56 @@ App({
     var that = this;
     this.getTlist();
   },
-  hasLogin: function () {
+  hasLogin: function () {//是否登录
     wx.getStorage({
       key: 'userInfo',
       success: function (res) {
       },
       fail: function (res) {
-        wx.reLaunch({
-          url: '/pages/toLogin/toLogin'
+        wx.showModal({
+          title: '提示',
+          content: '请先登录后再继续操作',
+          success (res) {
+            if (res.confirm) {
+              wx.reLaunch({
+                url:"/pages/my/index"
+              })
+            } else if (res.cancel) {
+              wx.navigateBack({//返回
+                delta: 1
+              })
+            }
+          }
         })
+      }
+    });
+  },
+
+  hasPhone: function () {//是否绑定手机号
+    wx.getStorage({
+      key: 'userInfo',
+      success: function (res) {
+        var phone = res.data.phone
+        if(phone==''||phone==null){
+          wx.showModal({
+            title: '提示',
+            content: '请先绑定手机后再继续操作',
+            success (res) {
+              if (res.confirm) {
+                wx.reLaunch({
+                  url:"/pages/my/info"
+                })
+              } else if (res.cancel) {
+                wx.navigateBack({//返回
+                  delta: 1
+                })
+              }
+            }
+          })
+        }
+      },
+      fail: function (res) {
+        
       }
     });
   },
@@ -89,14 +130,7 @@ App({
       }
     })
   },
-  getUser() {
 
-  },
-  login: function () {
-    wx.reLaunch({
-      url: '/pages/toLogin/toLogin'
-    })
-  },
   loginFail: function () {
     var that = this;
     wx.showModal({
@@ -112,13 +146,7 @@ App({
       data: data
     })
   },
-  setSk: function (data) { //将用户信息缓存保存
-    this.globalData.sk = data;
-    wx.setStorage({
-      key: "sk",
-      data: data
-    })
-  },
+  
   hasUpdate() {
     // 检查更新
     const updateManager = wx.getUpdateManager()

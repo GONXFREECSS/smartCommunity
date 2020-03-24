@@ -1,2 +1,2 @@
 <!--pages/notice/index.wxml-->
-<text>pages/notice/index.wxml</text>
+<l-status show="{{show}}" type="data"></l-status>>
